@@ -1,0 +1,381 @@
+.about-page {
+  background: linear-gradient(135deg, #fff8f0 0%, #fef7e0 100%);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 99, 71, 0.9),
+      rgba(255, 140, 0, 0.9)
+    );
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content .om-symbol {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: Georgia, serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content > p {
+  font-size: 1.3rem;
+  font-family: "Noto Sans Devanagari", serif;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.divider {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Container */
+.about-page .container {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin-bottom: 15px;
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #ff6347, #ffd700);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #cd853f;
+  font-style: italic;
+  font-family: "Noto Sans Devanagari", serif;
+}
+
+/* Mission Section */
+.mission-section {
+  margin-bottom: 80px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mission-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #ffd700;
+}
+
+.mission-card .card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  color: #8b4513;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: #5d4037;
+  line-height: 1.6;
+}
+
+/* Content Section */
+.content-section {
+  margin-bottom: 80px;
+}
+
+.two-column-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.two-column-layout.reverse {
+  flex-direction: row-reverse;
+}
+
+.column-text,
+.column-image {
+  flex: 1;
+  min-width: 400px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.7));
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.overlay-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.column-text h3 {
+  font-size: 2rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
+.column-text > p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5d4037;
+  margin-bottom: 30px;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 248, 220, 0.5);
+  border-radius: 10px;
+  border-left: 4px solid #ff6347;
+}
+
+.activity-icon {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.activity-item strong {
+  color: #8b4513;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.activity-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Committee Section */
+.committee-section {
+  margin-bottom: 80px;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Values Section */
+.values-section {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.value-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff6347, #ffd700);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 15px rgba(255, 99, 71, 0.3);
+}
+
+.value-item h4 {
+  color: #8b4513;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-family: "Noto Sans Devanagari", serif;
+}
+
+.value-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content .om-symbol {
+    font-size: 3rem;
+  }
+
+  .two-column-layout,
+  .two-column-layout.reverse {
+    flex-direction: column;
+  }
+
+  .column-text,
+  .column-image {
+    min-width: auto;
+  }
+
+  .mission-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-section {
+    padding: 40px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .container {
+    padding: 40px 15px;
+  }
+
+  .mission-card {
+    padding: 30px 20px;
+  }
+
+  .activities-list {
+    gap: 15px;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

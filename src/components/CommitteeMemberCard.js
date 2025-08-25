@@ -1,12 +1,17 @@
 import React from "react";
-import "./CommitteeMemberCard.css";
 
-function CommitteeMemberCard({ photo, name, role }) {
+function CommitteeMemberCard({ name, role, photo }) {
   return (
-    <div className="committee-card">
-      <img src={photo} alt={name} className="committee-photo" />
-      <h4 className="committee-name">{name}</h4>
-      <p className="committee-role">{role}</p>
+    <div className="committee-member-card">
+      <div className="committee-member">
+        <img 
+          src={photo} 
+          alt={name} 
+          className="member-image"
+        />
+        <h3 className="member-name">{name}</h3>
+        <p className="member-role">{role}</p>
+      </div>
     </div>
   );
 }

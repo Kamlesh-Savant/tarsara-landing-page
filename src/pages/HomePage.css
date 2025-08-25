@@ -9,7 +9,8 @@
 
 .hero-slider .carousel .slide img {
   height: 70vh;
-  object-fit: contain;
+  object-fit: cover;
+  width: 100%;
 }
 
 .hero-slider .carousel .legend {
@@ -134,6 +135,15 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-slider .carousel .slide img {
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  .hero-slider .legend {
+    padding: 30px 15px;
+  }
+
   .hero-slider .legend h1 {
     font-size: 2rem;
   }
@@ -163,15 +173,33 @@
 
 @media (max-width: 480px) {
   .hero-slider .carousel .slide img {
-    height: 50vh;
+    height: 40vh;
+    object-fit: cover;
+  }
+
+  /* move legend below image on mobile */
+  .hero-slider .carousel .legend {
+    position: static;
+    background: none;
+    color: #333;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .hero-slider .legend h1 {
+    font-size: 1.5rem;
+    color: #8b4513;
+    text-shadow: none;
+  }
+
+  .hero-slider .legend p {
+    font-size: 0.9rem;
+    color: #555;
+    text-shadow: none;
   }
 
   .welcome-section {
     padding: 60px 15px;
-  }
-
-  .hero-slider .legend {
-    padding: 30px 20px;
   }
 
   .features {

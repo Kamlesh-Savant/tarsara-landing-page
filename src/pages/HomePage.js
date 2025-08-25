@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 
@@ -6,16 +6,43 @@ import "./HomePage.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-// Import your slider images
-// import slider1 from "../assets/ganesha.jpg";
-// import slider2 from "../assets/shiva.jpg";
-// import slider3 from "../assets/vishnu.jpg";
-import slider1 from "../assets/slider1.jpg";
-import slider2 from "../assets/slider2.jpg";
-import slider3 from "../assets/slider3.jpg";
-import slider4 from "../assets/slider4.jpg";
+// Import your slider images for web
+import slider1Web from "../assets/slider1.jpg";
+import slider2Web from "../assets/slider2.jpg";
+import slider3Web from "../assets/slider3.jpg";
+import slider4Web from "../assets/slider4.jpg";
+
+// Import your slider images for mobile (you'll need to create these)
+import slider1Mobile from "../assets/slider1-mobile.jpg";
+import slider2Mobile from "../assets/slider2-mobile.jpg";
+import slider3Mobile from "../assets/slider3-mobile.jpg";
+import slider4Mobile from "../assets/slider4-mobile.jpg";
 
 function HomePage() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Define slider images based on device type
+  const sliderImages = isMobile ? [
+    slider1Mobile,
+    slider2Mobile,
+    slider3Mobile,
+    slider4Mobile
+  ] : [
+    slider1Web,
+    slider2Web,
+    slider3Web,
+    slider4Web
+  ];
+
   return (
     <div className="home-page">
       {/* હીરો સ્લાઇડર */}
@@ -28,16 +55,16 @@ function HomePage() {
           interval={5000}
         >
           <div>
-            <img src={slider4} alt="image4" />
+            <img src={sliderImages[3]} alt="image4" />
           </div>
           <div>
-            <img src={slider2} alt="image2" />
+            <img src={sliderImages[1]} alt="image2" />
           </div>
           <div>
-            <img src={slider3} alt="image3" />
+            <img src={sliderImages[2]} alt="image3" />
           </div>
           <div>
-            <img src={slider1} alt="image1" />
+            <img src={sliderImages[0]} alt="image1" />
           </div>
         </Carousel>
       </section>

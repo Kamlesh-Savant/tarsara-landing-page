@@ -13,11 +13,11 @@ import member5 from "../assets/member5.jpeg";
 
 function AboutPage() {
   const committeeData = [
-    { name: "રાજેશભાઈ છગનભાઈ તરસરીયા", role: "(ગામ : દડલી)", photo: member1 },
-    { name: "પંકેશભાઈ મથુરભાઈ તરસરીયા", role: "(ગામ : કસાણ)", photo: member2 },
     { name: "પરેશભાઈ દુલાભાઈ તરસરીયા", role: "(ગામ : દડલી)", photo: member3 },
-    { name: "કિશોરભાઈ લાખાભાઈ તરસરીયા", role: "(ગામ : મોટા ખુટવડા)", photo: member4 },
-    { name: "શૈલેષભાઈ વિઠ્ઠલભાઈ તરસરીયા", role: "(ગામ : નાની વડાળ)", photo: member5 },
+    { name: "પંકેશભાઈ મથુરભાઈ તરસરીયા", role: "(ગામ : કસાણ)", photo: member2 },
+    { name: "કિશોરભાઈ લાખાભાઈ તરસરીયა", role: "(ગામ : મોટા ખુટવડા)", photo: member4 },
+    { name: "રાજેશભાઈ છગનભાઈ તરસરીયા", role: "(ગામ : દડલી)", photo: member5 },
+    { name: "શૈલેષભાઈ વિઠ્ઠલભાઈ તરસરીયા", role: "(ગામ : નાની વડાળ)", photo: member1 },
   ];
 
   return (
@@ -95,7 +95,7 @@ function AboutPage() {
               <h3>અમારું મિશન અને હેતુ</h3>
               <p>
                 નમસ્તે! અમારા આધ્યાત્મિક પરિવારમાં આપનું સ્વાગત છે. અમારા મિશન એ
-                પૂજાગૃહ માટે પવિત્ર સ્થળ પ્રદાન કરવું, સનાતન ધર્મ ના શાશ્વત
+                પૂજાગૃહ માટે પવિત્ર સ્થળ પ્રદાન કરવું, સनાતન ધર્મ ના શાશ્વત
                 મૂલ્યોને પ્રોત્સાહિત કરવું અને પ્રેમ અને સમર્પણથી અમારી સમુદાયની
                 સેવા કરવી છે.
               </p>
@@ -144,7 +144,12 @@ function AboutPage() {
 
           <div className="committee-grid">
             {committeeData.map((member, index) => (
-              <CommitteeMemberCard key={index} {...member} />
+              <CommitteeMemberCard 
+                key={index} 
+                name={member.name} 
+                role={member.role} 
+                photo={member.photo}
+              />
             ))}
           </div>
         </section>

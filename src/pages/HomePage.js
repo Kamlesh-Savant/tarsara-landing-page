@@ -13,6 +13,7 @@ import { Carousel } from "react-responsive-carousel";
 import slider1 from "../assets/slider1.jpg";
 import slider2 from "../assets/slider2.jpg";
 import slider3 from "../assets/slider3.jpg";
+import slider4 from "../assets/slider4.jpg";
 
 function HomePage() {
   return (
@@ -27,13 +28,16 @@ function HomePage() {
           interval={5000}
         >
           <div>
-            <img src={slider1} alt="લોર્ડ ગણેશા" />
+            <img src={slider4} alt="image4" />
           </div>
           <div>
-            <img src={slider2} alt="લોર્ડ શિવ" />
+            <img src={slider2} alt="image2" />
           </div>
           <div>
-            <img src={slider3} alt="લોર્ડ વિષ્ણુ" />
+            <img src={slider3} alt="image3" />
+          </div>
+          <div>
+            <img src={slider1} alt="image1" />
           </div>
         </Carousel>
       </section>

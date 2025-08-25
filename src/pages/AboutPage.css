@@ -263,16 +263,33 @@
 }
 
 /* Committee Section */
-.committee-section {
-  margin-bottom: 80px;
+.committee-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center; /* centers last row */
+  margin-bottom: 30px;
 }
 
-.committee-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+.committee-grid > div {
+  width: calc(33.333% - 30px); /* exactly 3 per row */
+  box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .committee-grid > div {
+    width: calc(50% - 30px); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .committee-grid > div {
+    width: 100%; /* 1 per row on mobile */
+  }
+}
+
+
+
 
 /* Values Section */
 .values-section {

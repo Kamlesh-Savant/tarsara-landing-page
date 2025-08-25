@@ -5,19 +5,19 @@ import "./AboutPage.css";
 import activitiesImage from "../assets/activities-image.jpg";
 import CommitteeMemberCard from "../components/CommitteeMemberCard";
 // સભ્યોની છબીઓ આયાત કરો
-import member1 from "../assets/member1.png";
-import member2 from "../assets/member2.png";
-import member3 from "../assets/member3.png";
-import member4 from "../assets/member4.png";
-import member5 from "../assets/member5.png";
+import member1 from "../assets/member1.jpeg";
+import member2 from "../assets/member2.jpeg";
+import member3 from "../assets/member3.jpeg";
+import member4 from "../assets/member4.jpeg";
+import member5 from "../assets/member5.jpeg";
 
 function AboutPage() {
   const committeeData = [
-    { name: "શ્રી. રમેશ પટેલ", role: "પ્રમુખ", photo: member1 },
-    { name: "શ્રીમતી. પ્રિયા શર્મા", role: "ઉપપ્રમુખ", photo: member2 },
-    { name: "શ્રી. વિક્રમ સિંહ", role: "સચિવ", photo: member3 },
-    { name: "શ્રીમતી. અંજલિ મહેતા", role: "ખજાનચી", photo: member4 },
-    { name: "શ્રી. અર્જુન દેસાઈ", role: "સાંસ્કૃતિક સચિવ", photo: member5 },
+    { name: "રાજેશભાઈ છગનભાઈ તરસરીયા", role: "(ગામ : દડલી)", photo: member1 },
+    { name: "પંકેશભાઈ મથુરભાઈ તરસરીયા", role: "(ગામ : કસાણ)", photo: member2 },
+    { name: "પરેશભાઈ દુલાભાઈ તરસરીયા", role: "(ગામ : દડલી)", photo: member3 },
+    { name: "કિશોરભાઈ લાખાભાઈ તરસરીયા", role: "(ગામ : મોટા ખુટવડા)", photo: member4 },
+    { name: "શૈલેષભાઈ વિઠ્ઠલભાઈ તરસરીયા", role: "(ગામ : નાની વડાળ)", photo: member5 },
   ];
 
   return (

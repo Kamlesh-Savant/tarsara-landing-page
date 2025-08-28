@@ -136,9 +136,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-slider .carousel .slide img {
-    height: 50vh;
-    object-fit: cover;
+    height: auto;       /* Let image keep natural aspect ratio */
+    max-height: 50vh;   /* Restrict to 50% of viewport height */
+    width: 100%;        /* Fit width */
+    object-fit: contain; /* Show full image */
   }
+
 
   .hero-slider .legend {
     padding: 30px 15px;
@@ -172,9 +175,18 @@
 }
 
 @media (max-width: 480px) {
+  .hero-slider .carousel .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto !important; /* remove fixed height */
+  }
+
   .hero-slider .carousel .slide img {
-    height: 40vh;
-    object-fit: cover;
+    width: 100%;
+    height: auto !important;  /* keep aspect ratio */
+    max-height: 50vh;         /* keep it inside viewport */
+    object-fit: contain;      /* show full image */
   }
 
   /* move legend below image on mobile */

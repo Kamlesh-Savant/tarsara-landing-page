@@ -9,6 +9,7 @@ import ContactPage from "./pages/ContactPage"; // 1. IMPORT CONTACT PAGE
 import HistoryPage from "./pages/HistoryPage";
 
 import "./App.css";
+import LogoAnimation from "./pages/LogoAnimation";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Header />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<LogoAnimation />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/contact" element={<ContactPage />} />{" "}
